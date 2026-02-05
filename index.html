@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math-Kelompok 7</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        
+        .quiz-card-anim {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .explanation-show {
+            animation: slideDown 0.4s ease-out forwards;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; max-height: 0; }
+            to { opacity: 1; max-height: 500px; }
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <nav class="glass sticky top-0 z-50 border-b border-slate-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-emerald-700">
+                    Kelompok 7
+                </span>
+            </div>
+            
+        </div>
+    </nav>
+
+    <header class="relative overflow-hidden bg-white pt-16 pb-20 lg:pt-24 lg:pb-28">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 fade-in">
+                <h1 class="text-4xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                    Persamaan <span class="text-emerald-600">Lingkaran</span> Dengan Pusat (a,b) dan (0,0) melalui titik tertentu
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                     Memahami pesamaan lingkaran. Dari titik pusat (0,0) dan (a,b) melalui titik tertentu, dijelaskan secara sederhana.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#materi" class="bg-emerald-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-emerald-700 transition shadow-md">Materi</a>
+                    <a href="#kuis" class="bg-white border-2 border-slate-200 text-slate-700 px-8 py-3 rounded-xl font-semibold hover:border-emerald-600 hover:text-emerald-600 transition">Quiz</a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 mt-12 lg:mt-0 flex justify-center fade-in" style="animation-delay: 0.2s;">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-64 h-64 bg-emerald-50 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                    
+                    <svg width="350" height="350" viewBox="0 0 400 400" class="relative drop-shadow-xl">
+                        <circle cx="200" cy="200" r="150" stroke="#059669" stroke-width="8" fill="white" />
+                        <line x1="200" y1="200" x2="330" y2="120" stroke="#059669" stroke-width="4" />
+                        <circle cx="200" cy="200" r="8" fill="#059669" />
+                        <text x="210" y="230" font-family="Poppins" font-weight="bold" fill="#1e293b">P(a, b)</text>
+                        <text x="260" y="150" font-family="Poppins" font-weight="bold" fill="#059669" transform="rotate(-30 260,150)">r</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        
+        <section id="materi" class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Dasar Persamaan Lingkaran</h2>
+                <p class="text-slate-600 mb-6 leading-relaxed">Secara Matematis, lingkaran dengan adalah kumpulan titik-titik yang memiliki jarak yang sama terhadap titik pusat, jarak tersebut kita sebut sebagai jari-jari(r).</p>
+                
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition duration-300">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800">Pusat (0, 0)</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Jika pusat lingkaran berada di titik asal (0,0), maka setiap titik pada lingkaran memiliki jarak yang sama dari pusat tersebut. Jarak ini disebut jari-jari (r).</p>
+                    
+                    <div class="bg-emerald-600 p-6 rounded-2xl mb-6 text-center">
+                        <span class="font-mono text-2xl font-bold text-white">x² + y² = r²</span>
+                    </div>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Bagaimana jika melalui titik (X1, y1)?<br>
+                      Jika lingkaran melalui suatu titik tertentu, kita dapat mencari nilai r² dengan mensubstitusikan koordinat titik tersebut ke dalam rumus.</p>
+                    
+                    <div class="bg-slate-50 p-5 rounded-xl border-l-4 border-emerald-600">
+                        <p class="font-semibold text-emerald-700 mb-2">Contoh Cepat:</p>
+                        <p class="text-sm text-slate-600 italic">Melalui titik (3, 4): r² = 3² + 4² = 25. Persamaan menjadi x² + y² = 25.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition duration-300">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800">Pusat (a, b)</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Jika pusat lingkaran berada di titik (a, b), maka kita menggunakan bentuk standar persamaan lingkaran berikut.</p>
+                    
+                    <div class="bg-emerald-600 p-6 rounded-2xl mb-6 text-center">
+                        <span class="font-mono text-2xl font-bold text-white">(x - a)² + (y - b)² = r²</span>
+                    </div>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Bagaimana jika melalui titik (x1, y1)?<br>Jika lingkaran melalui suatu titik tertentu, nilai r² dapat dihitung dari jarak antara pusat dan titik tersebut. Tentukan (a,b) lalu hitung r²</p>
+
+                    <div class="bg-slate-50 p-5 rounded-xl border-l-4 border-emerald-700">
+                        <p class="font-semibold text-emerald-700 mb-2">Contoh Cepat:</p>
+                        <p class="text-sm text-slate-600 italic">Pusat (1, -2), r = 5. Persamaan menjadi (x - 1)² + (y + 2)² = 25.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kuis" class="py-20">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12">
+         
+                <div class="bg-emerald-600 px-8 py-2 rounded-xl mb-3 text-center w-fit mx-auto">
+                  <span class="font-mono text-lg text-white">QUIZ</span>
+                </div>
+            </div>
+            
+            <div id="quiz-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-6">
+                
+                <span class="text-xl font-bold">Kelompok 7</span>
+            </div>
+           
+            <div class="border-t border-slate-800 pt-8 text-sm text-slate-500">
+                &copy; 2026 Kelompok 7. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const questionsData = [
+    { 
+        id: 1, 
+        question: "Persamaan lingkaran pusat (0,0) dan melalui titik (3, 4) adalah...", 
+        options: ["x² + y² = 16", "x² + y² = 25", "x² + y² = 9", "x² + y² = 7"], 
+        correctIndex: 1, 
+        explanation: "Gunakan r² = x² + y². Substitusi (3,4): 3² + 4² = 9 + 16 = 25." 
+    },
+
+    { 
+        id: 2, 
+        question: "Pusat (1, -2) dan melalui titik (4, 2). Persamaannya adalah...", 
+        options: ["(x - 1)² + (y + 2)² = 25", "(x + 1)² + (y - 2)² = 25", "(x - 1)² + (y - 2)² = 16", "(x - 1)² + (y + 2)² = 10"], 
+        correctIndex: 0, 
+        explanation: "r² = (4−1)² + (2−(−2))² = 3² + 4² = 25." 
+    },
+
+    { 
+        id: 3, 
+        question: "Berapakah jari-jari lingkaran x² + y² = 169?", 
+        options: ["12", "13", "14", "15"], 
+        correctIndex: 1, 
+        explanation: "x² + y² = r² → r² = 169 → r = √169 = 13." 
+    },
+
+    { 
+        id: 4, 
+        question: "Tentukan r² jika pusat (3, 4) melalui titik (6, 8)!", 
+        options: ["100", "50", "25", "16"], 
+        correctIndex: 2, 
+        explanation: "r² = (6−3)² + (8−4)² = 3² + 4² = 25." 
+    },
+    
+    { 
+        id: 5, 
+        question: "Persamaan lingkaran dengan pusat (2, 3) dan melalui titik (5, 3) adalah...", 
+        options: [
+            "(x − 2)² + (y − 3)² = 9",
+            "(x + 2)² + (y + 3)² = 9",
+            "(x − 2)² + (y − 3)² = 25",
+            "(x − 5)² + (y − 3)² = 9"
+        ], 
+        correctIndex: 0, 
+        explanation: "r² = (5−2)² + (3−3)² = 3² + 0 = 9." 
+    },
+
+    { 
+        id: 6, 
+        question: "Persamaan lingkaran dengan pusat (−2, −1) dan melalui titik (1, 3) adalah...", 
+        options: [
+            "(x + 2)² + (y + 1)² = 25",
+            "(x − 2)² + (y − 1)² = 25",
+            "(x + 2)² + (y − 1)² = 25",
+            "(x − 2)² + (y + 1)² = 25"
+        ], 
+        correctIndex: 0, 
+        explanation: "r² = (1−(−2))² + (3−(−1))² = 3² + 4² = 25." 
+    }
+];
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function renderQuiz() {
+            const quizContainer = document.getElementById('quiz-container');
+            const shuffled = shuffleArray([...questionsData]);
+
+            shuffled.forEach((q, index) => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-2xl shadow-sm border border-slate-100 quiz-card-anim flex flex-col h-full";
+                card.style.animationDelay = `${index * 0.1}s`; 
+
+                let optionsHTML = '';
+                q.options.forEach((opt, idx) => {
+                    optionsHTML += `
+                        <button onclick="checkAnswer(this, ${q.id}, ${idx})" 
+                                class="w-full text-left p-4 mb-3 rounded-xl border border-slate-100 hover:bg-emerald-50 hover:border-emerald-200 transition duration-200 option-btn-${q.id} font-medium text-slate-700">
+                            <span class="inline-block w-8 h-8 text-center leading-8 bg-slate-100 rounded-lg text-emerald-600 mr-3 font-bold">${String.fromCharCode(65 + idx)}</span>
+                            ${opt}
+                        </button>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="mb-6">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Soal ${index + 1}</span>
+                        <p class="mt-2 text-lg font-bold text-slate-800">${q.question}</p>
+                    </div>
+                    <div class="flex-grow">${optionsHTML}</div>
+                    <div id="explanation-${q.id}" class="hidden mt-4 bg-emerald-50 p-4 rounded-xl border-l-4 border-emerald-600 text-sm explanation-show">
+                        <p class="font-bold text-emerald-800 mb-1 flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                            Pembahasan:
+                        </p>
+                        <p class="text-emerald-700">${q.explanation}</p>
+                    </div>
+                `;
+                quizContainer.appendChild(card);
+            });
+        }
+
+        function checkAnswer(btnElement, questionId, selectedIndex) {
+            const question = questionsData.find(q => q.id === questionId);
+            const allOptions = document.querySelectorAll(`.option-btn-${questionId}`);
+            
+            allOptions.forEach(btn => btn.disabled = true);
+
+            if (selectedIndex === question.correctIndex) {
+                btnElement.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+            } else {
+                btnElement.classList.add('bg-red-100', 'border-red-500', 'text-red-900');
+                allOptions[question.correctIndex].classList.add('bg-emerald-50', 'border-emerald-500');
+            }
+
+            document.getElementById(`explanation-${questionId}`).classList.remove('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', renderQuiz);
+    </script>
+</body>
+</html>
